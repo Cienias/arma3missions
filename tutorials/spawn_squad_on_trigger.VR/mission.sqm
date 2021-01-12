@@ -1,0 +1,172 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=129;
+	class ItemIDProvider
+	{
+		nextID=17;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={4003.866,30,3987.4614};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+};
+class AddonsMetaData
+{
+	class List
+	{
+
+	};
+};
+randomSeed=9861780;
+class ScenarioData
+{
+	author="Cienias";
+};
+class Mission
+{
+	class Intel
+	{
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=7;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4000.0906,5.0014391,3999.9558};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="B_Soldier_A_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3999.9839,5.0005002,4015.9673};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2;
+			type="VR_Area_01_circle_4_yellow_F";
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={4000.0039,5,4015.981};
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{hint ""trigger"";" \n "_alpha_1 = [getMarkerPos ""spawn_location_0"", WEST, [""B_Soldier_A_F"", ""B_Soldier_A_F"", ""B_Soldier_A_F"", ""B_Soldier_A_F""]] call BIS_fnc_spawnGroup;" \n "_waypoint_0 = _alpha_1 addWaypoint [getMarkerPos ""waypoint_location_0"", 0];" \n "_waypoint_0 setWaypointType ""MOVE"";" \n "}";
+				sizeA=4;
+				sizeB=4;
+				activationBy="ANYPLAYER";
+			};
+			id=3;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4000.1123,5.0005002,4025.8638};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=4;
+			type="VR_Area_01_square_1x1_yellow_F";
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={4000.1274,5,4025.8838};
+			name="spawn_location_0";
+			type="Empty";
+			id=5;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4015.9441,6.0489998,4026.1733};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=15;
+			type="VR_3DSelector_01_default_F";
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={4015.8618,5,4026.1794};
+			name="waypoint_location_0";
+			type="Empty";
+			id=16;
+		};
+	};
+};
