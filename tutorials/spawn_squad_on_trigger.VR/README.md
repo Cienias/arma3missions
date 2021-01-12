@@ -1,5 +1,5 @@
 **Simple trigger spawning squad of AI units and giving them a waypoint.**
-
+[Polish Readme](https://github.com/Cienias/arma3missions/blob/main/tutorials/spawn_squad_on_trigger.VR/README_PL.md)
 Explanation of the code insde a trigger:
 
 ```
