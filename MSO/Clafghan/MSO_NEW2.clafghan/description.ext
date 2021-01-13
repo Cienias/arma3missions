@@ -1,0 +1,20 @@
+respawn = "BASE";
+respawndelay = 60;
+disabledAI = 1;
+author="Cienias";
+OnLoadName = "Clafghani Peacekeeping Force 7.1";
+disableChannels[]={6};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class muezzin
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "muezzin";
+		// filename, volume, pitch
+		sound[] = {"sound\muezzin.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {0, " "};
+	};
+};
