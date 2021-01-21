@@ -8,7 +8,7 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=931;
+		nextID=934;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=31;
+		nextID=33;
 	};
 	class Camera
 	{
-		pos[]={8928.0273,473.95737,4306.2617};
-		dir[]={0.12196656,-0.52029073,-0.84533089};
-		up[]={0.074306704,0.85393494,-0.51500595};
-		aside[]={-0.98983371,-7.4756827e-007,-0.14281882};
+		pos[]={8888.0352,486.82993,4279.8931};
+		dir[]={0.83118004,-0.54639053,-0.10402439};
+		up[]={0.54221147,0.83745986,-0.067859367};
+		aside[]={-0.12419599,-6.5285712e-007,-0.99236864};
 	};
 };
 binarizationWanted=0;
@@ -1325,7 +1325,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{_spawn = [""Interactions"", ""Spawn"", """", {execVM ""scripts\spawnVehicleNorth.sqf"";}, {true}] call ace_interact_menu_fnc_createAction; " \n "   " \n "[this, 0, [""ACE_MainActions""], _spawn] call ace_interact_menu_fnc_addActionToObject;}";
+				init="call{_spawn = [""Interactions"", ""Spawn"", """", {execVM ""scripts\spawnVehicle.sqf"";}, {true}] call ace_interact_menu_fnc_createAction; " \n "   " \n "[this, 0, [""ACE_MainActions""], _spawn] call ace_interact_menu_fnc_addActionToObject;}";
 			};
 			id=907;
 			type="C_Quadbike_01_F";
