@@ -1,0 +1,28 @@
+class Params
+{
+	class Daytime
+	{
+		title = "Time";
+		texts[] = {"Morning","Day","Evening","Night"};
+		values[] = {6,12,18,0};
+		default = 12;
+		function = "BIS_fnc_paramDaytime"; // (Optional) Function called when player joins, selected value is passed as an argument
+		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
+		class Weather
+	{
+		title = "Weather";
+		texts[] = {"Clear","Cloudy","Overcast","Rain","Thunderstorm"};
+		values[] = {0,25,50,75,100};
+		default = 0;
+		function = "BIS_fnc_paramWeather"; // (Optional) Function called when player joins, selected value is passed as an argument
+		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
+		class Traffic
+	{
+		title = "Traffic";
+		texts[] = {"Low","Moderate","High","Random", "DEBUG"};
+		values[] = {1,2,3,4,5};
+		default = 1;
+	};
+};
