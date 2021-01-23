@@ -20,10 +20,10 @@ _posDestCheckpoint = _posSpawn;
 _posDestFinal = _posSpawn;
 
 if (_posSpawnString == "spawn_south_0" || _posSpawnString == "spawn_south_1") then {
-	 _posDestCheckpoint = getMarkerPos "checkpoint_stop_south";
+	 _posDestCheckpoint = getMarkerPos "checkpoint_stop_south_0";
 	 _posDestFinal = getMarkerPos selectRandom ["spawn_north_0", "spawn_north_1"];
 	 } else {
-			_posDestCheckpoint = getMarkerPos "checkpoint_stop_north";
+			_posDestCheckpoint = getMarkerPos "checkpoint_stop_north_0";
 			_posDestFinal = getMarkerPos selectRandom ["spawn_south_0", "spawn_south_1"];
 		  };
 
@@ -36,7 +36,6 @@ _passengerCount = random _maxCargo;
 
 _grpCiv addVehicle _vehicle;
 
-
 if (_randomCargoContrabandProb > 8) then {
 	for "_i" from 0 to _randomCargoAmount do {
 		_randomItem = selectRandom [[] call randomCargoLegalClass, [] call randomCargoContrabandClass];
@@ -48,8 +47,6 @@ if (_randomCargoContrabandProb > 8) then {
 		_vehicle addItemCargo [_randomItem,1];
 	};
 };
-
-
 
 _civilian1 = _grpCiv createUnit [_civilianRandomClass, _posSpawn, [], 0, "NONE"];
 _civilian1 moveInDriver _vehicle;
