@@ -2,6 +2,7 @@ randomCivilianClass = compile preprocessFile "scripts\configs\randomCivilian.sqf
 randomVehicleClass = compile preprocessFile "scripts\configs\randomVehicle.sqf";
 randomCargoLegalClass = compile preprocessFile "scripts\configs\randomCargoLegal.sqf";
 randomCargoContrabandClass = compile preprocessFile "scripts\configs\randomCargoContraband.sqf";
+randomMusicClass = compile preprocessFile "scripts\configs\randomMusic.sqf";
 
 _civilianRandomClass = [] call randomCivilianClass;
 _vehicleRandomClass = [] call randomVehicleClass;
@@ -68,3 +69,16 @@ _aceInteractionTurnAround = ["Interactions", "Turn around", "", {[_target, "turn
 [_vehicle, 0, ["ACE_MainActions"], _aceInteractionTurnAround] call ace_interact_menu_fnc_addActionToObject;
 
 _grpCiv addWaypoint [_posDestCheckpoint, 0];
+
+_randomMusicProb = random 100;
+if (_randomMusicProb > 90) then {
+	_randomMusic = [] call randomMusicClass;
+	_randomMusicTitle = _randomMusic select 0;
+	_randomMusicLength = _randomMusic select 1;
+	//systemchat format ['Music: %1', _randomMusicTitle];
+	//systemchat format ['Music len: %1', _randomMusicLength];
+	_vehicle say3D _randomMusicTitle;
+	_vehicle say3D _randomMusicTitle;
+	_vehicle say3D _randomMusicTitle;
+	sleep _randomMusicLength;
+};

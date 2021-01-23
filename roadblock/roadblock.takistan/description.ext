@@ -33,3 +33,26 @@ class Params
 		default = 2;
 	};
 };
+
+class CfgSounds
+{
+	sounds[] = {};
+	class arabic1
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "arabic1";
+		// filename, volume, pitch
+		sound[] = {"sound\arabic1.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {0, " "};
+	};
+		class arabic2
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "arabic2";
+		// filename, volume, pitch
+		sound[] = {"sound\arabic2.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {0, " "};
+	};
+};
