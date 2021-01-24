@@ -40,12 +40,12 @@ _grpCiv addVehicle _vehicle;
 if (_randomCargoContrabandProb > 8) then {
 	for "_i" from 0 to _randomCargoAmount do {
 		_randomItem = selectRandom [[] call randomCargoLegalClass, [] call randomCargoContrabandClass];
-		_vehicle addItemCargo [_randomItem,1];
+		_vehicle addItemCargoGlobal [_randomItem,1];
 	};
 } else {
 		for "_i" from 0 to _randomCargoAmount do {
 		_randomItem = [] call randomCargoLegalClass;
-		_vehicle addItemCargo [_randomItem,1];
+		_vehicle addItemCargoGlobal [_randomItem,1];
 	};
 };
 
@@ -62,11 +62,8 @@ _vehicle setVariable ["vehicleSpawn", _posSpawn, true];
 _vehicle setVariable ["vehicleDestinationFinal", _posDestFinal, true];
 _vehicle setVariable ["vehicleGroup", _grpCiv, true];
 
-_aceInteractionGo = ["Interactions", "You can go", "", {[_target, "go"]execVM "scripts\order.sqf";}, {true}] call ace_interact_menu_fnc_createAction;
-_aceInteractionTurnAround = ["Interactions", "Turn around", "", {[_target, "turnAround"]execVM "scripts\order.sqf";}, {true}] call ace_interact_menu_fnc_createAction; 
-
-[_vehicle, 0, ["ACE_MainActions"], _aceInteractionGo] call ace_interact_menu_fnc_addActionToObject;
-[_vehicle, 0, ["ACE_MainActions"], _aceInteractionTurnAround] call ace_interact_menu_fnc_addActionToObject;
+//_vehicle remoteExec ["scipts\addOrderMultiplayer.sqf", 0, true];
+[[_vehicle],'scripts\orderMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
 
 _grpCiv addWaypoint [_posDestCheckpoint, 0];
 
@@ -77,8 +74,5 @@ if (_randomMusicProb > 90) then {
 	_randomMusicLength = _randomMusic select 1;
 	//systemchat format ['Music: %1', _randomMusicTitle];
 	//systemchat format ['Music len: %1', _randomMusicLength];
-	_vehicle say3D _randomMusicTitle;
-	_vehicle say3D _randomMusicTitle;
-	_vehicle say3D _randomMusicTitle;
-	sleep _randomMusicLength;
+	[[_vehicle, _randomMusicTitle, _randomMusicLength],'scripts\playMusicMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
 };

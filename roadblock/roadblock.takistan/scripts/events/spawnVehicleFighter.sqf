@@ -36,7 +36,6 @@ for "_i" from 1 to _passengerCount do {
 	_x moveInCargo _vehicle;
 };
 
-
 _grpFighters addWaypoint [_posDestCheckpoint, 0];
 _nextWaypoint = selectRandom [_posDestFinal, getMarkerPos "checkpoint_center"];
 _grpFighters addWaypoint [_nextWaypoint,0];
