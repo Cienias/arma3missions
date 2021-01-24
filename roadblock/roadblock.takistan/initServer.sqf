@@ -1,0 +1,1 @@
+_handle = execVM "scripts\eventManager.sqf";
