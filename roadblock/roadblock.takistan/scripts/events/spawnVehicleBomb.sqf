@@ -33,8 +33,13 @@ _waypoint = _grpBomber addWaypoint [getMarkerPos "checkpoint_center", 0];
 
 _waypoint setWaypointBehaviour "CARELESS";
 _waypoint setWaypointSpeed "FULL";
-_waypoint setWaypointStatements ["true", "_bomb = 'Bo_GBU12_LGB' createVehicle position this; _bomb setdamage 1;"];
+//_waypoint setWaypointStatements ["true", "_bomb = 'Bo_GBU12_LGB' createVehicle position this; _bomb setdamage 1;"];
 
-[[_vehicle],'scripts\playBeepMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
+//[[_vehicle],'scripts\playBeepMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
+
+_vehicle setVariable ["vehicleDisarmed", false, true];
+
+[[_vehicle],'scripts\bomberCar.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
 
 [[_vehicle],'scripts\removeVehicleAction.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
+[[_vehicle],'scripts\disarmVehicleAction.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
