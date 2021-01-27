@@ -64,6 +64,7 @@ _vehicle setVariable ["vehicleGroup", _grpCiv, true];
 
 //_vehicle remoteExec ["scipts\addOrderMultiplayer.sqf", 0, true];
 [[_vehicle],'scripts\orderMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
+[[_vehicle],'scripts\removeVehicleAction.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
 
 _grpCiv addWaypoint [_posDestCheckpoint, 0];
 

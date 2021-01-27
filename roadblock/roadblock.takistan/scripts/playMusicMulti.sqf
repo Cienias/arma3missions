@@ -4,7 +4,5 @@ _randomMusicLength = _this select 2;
 
 while {true} do {
 _vehicle say3D _randomMusicTitle;
-_vehicle say3D _randomMusicTitle;
-_vehicle say3D _randomMusicTitle;
 sleep _randomMusicLength;
 };
