@@ -46,12 +46,21 @@ class CfgSounds
 		// subtitle delay in seconds, subtitle text 
 		titles[] = {0, " "};
 	};
-		class arabic2
+	class arabic2
 	{
 		// how the sound is referred to in the editor (e.g. trigger effects)
 		name = "arabic2";
 		// filename, volume, pitch
 		sound[] = {"sound\arabic2.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {0, " "};
+	};
+	class beep
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "beep";
+		// filename, volume, pitch
+		sound[] = {"sound\beep.ogg", 1, 1};
 		// subtitle delay in seconds, subtitle text 
 		titles[] = {0, " "};
 	};

@@ -35,3 +35,4 @@ _waypoint setWaypointBehaviour "CARELESS";
 _waypoint setWaypointSpeed "FULL";
 _waypoint setWaypointStatements ["true", "_bomb = 'Bo_GBU12_LGB' createVehicle position this; _bomb setdamage 1;"];
 
+[[_vehicle],'scripts\playBeepMulti.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
