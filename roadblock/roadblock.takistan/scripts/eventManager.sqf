@@ -1,6 +1,7 @@
 randomEventLightClass = compile preprocessFile "scripts\configs\randomEventLight.sqf";
 randomEventMediumClass = compile preprocessFile "scripts\configs\randomEventMedium.sqf";
 randomEventHeavyClass = compile preprocessFile "scripts\configs\randomEventHeavy.sqf";
+randomEventSpecialClass = compile preprocessFile "scripts\configs\randomEventSpecial.sqf";
 
 _oppositionHeavy = objNull;
 _oppositionMedium = objNull;
@@ -12,7 +13,7 @@ switch (paramsArray select 3) do {
 	default { _oppositionHeavy = 89; _oppositionMedium = 74;};
 };
 
-
+_eventSpecial = _oppositionMedium - 10;
 
 while {true} do {
 	//_randomEventClass = [] call randomEventClass;
@@ -25,8 +26,12 @@ while {true} do {
 		if (_eventRandom > _oppositionMedium) then {
 			_randomEventClass = [] call randomEventMediumClass;
 		} else {
-			_randomEventClass = [] call randomEventLightClass;
-		}
+			if (_eventRandom > _eventSpecial) then {
+				_randomEventClass = [] call randomEventSpecialClass;
+			} else {
+				_randomEventClass = [] call randomEventLightClass;
+			};
+		};
 	};
 
 	_intervalLow = random [180, 300, 600];

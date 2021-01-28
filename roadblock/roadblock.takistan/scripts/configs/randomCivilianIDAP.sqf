@@ -1,0 +1,3 @@
+//_this = selectRandom ["C_man_polo_1_F", "C_man_polo_2_F", "C_man_polo_3_F", "C_man_polo_4_F", "C_man_polo_5_F", "C_man_polo_6_F"];
+_this = selectRandom ["C_IDAP_Man_AidWorker_01_F","C_IDAP_Man_AidWorker_07_F","C_IDAP_Man_AidWorker_08_F","C_IDAP_Man_AidWorker_09_F","C_IDAP_Man_AidWorker_02_F","C_IDAP_Man_AidWorker_06_F","C_IDAP_Man_AidWorker_04_F","C_IDAP_Man_AidWorker_03_F","C_IDAP_Man_EOD_01_F","C_IDAP_Man_Paramedic_01_F"];
+_this
