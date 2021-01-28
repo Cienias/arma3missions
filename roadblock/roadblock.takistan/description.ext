@@ -64,4 +64,13 @@ class CfgSounds
 		// subtitle delay in seconds, subtitle text 
 		titles[] = {0, " "};
 	};
+	class hardbass
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "hardbass";
+		// filename, volume, pitch
+		sound[] = {"sound\hardbass.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text 
+		titles[] = {0, " "};
+	};
 };
