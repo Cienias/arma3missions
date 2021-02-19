@@ -22,5 +22,5 @@ if (_order == "go") then {
 		  };
 
 
-//_waypoint setWaypointStatements ["true", "{doGetOut _x} forEach thisList; {deleteVehicle _x} forEach thisList; deleteVehicle this;"];
-_waypoint setWaypointStatements ["true", "{doGetOut _x} forEach thisList; deleteVehicle this;"];
+_waypoint setWaypointStatements ["true", "{doGetOut _x} forEach thisList; {deleteVehicle _x} forEach thisList; deleteVehicle this;"];
+

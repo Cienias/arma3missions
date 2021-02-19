@@ -40,6 +40,7 @@ _grpFighters addWaypoint [_posDestCheckpoint, 0];
 _nextWaypoint = selectRandom [_posDestFinal, getMarkerPos "checkpoint_center"];
 _grpFighters addWaypoint [_nextWaypoint,0];
 _waypointFinal = _grpFighters addWaypoint [_posDestFinal,0];
-_waypointFinal setWaypointStatements ["true", "{doGetOut _x} forEach thisList; {deleteVehicle _x} forEach thisList; deleteVehicle this;"];
+//_waypointFinal setWaypointStatements ["true", "{doGetOut _x} forEach thisList; {deleteVehicle _x} forEach thisList; deleteVehicle this;"];
+_waypointFinal setWaypointStatements ["true", "{doGetOut _x} forEach thisList; deleteVehicle this;"];
 
 [[_vehicle],'scripts\removeVehicleAction.sqf'] remoteExec ['BIS_fnc_execVM', 0, true];
